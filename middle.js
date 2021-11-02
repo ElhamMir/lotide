@@ -1,38 +1,11 @@
+const assertEqual = require('./assertEqual')
+const eqArrays = require('./eqArrays')
 
-const assertEqual = function(actual, expected) {
-
-    if (actual === expected) {
-      console.log(` ✅Assertion Passed: ${actual } ===  ${expected} `);
-    } else {
-      console.log(`🛑 Assertion Failed: ${actual} !==  ${expected} `);
-    }
-  //console.assert(assertEqual("Lighthouse Labs", "Bootcamp"))
-  };
+const assertArraysEqual = require('./assertArraysEqual')
   
 
-  const eqArrays = function(actual, expected) {
-    if(actual.length === expected.length ){
+  
 
-        for(let i = 0;i < actual.length; i++){
-            if(actual[i] !== expected[i]){
-                return false;
-            }
-           
-        }
-        return true;
-    }
-    return false;
-
-
-}
-const assertArraysEqual = function(actual, expected){
-    if(eqArrays(actual,expected) === true){
-        console.log(`✅ Assertion Passed: ${actual } ===  ${expected} `);
-    }
-    else {
-        console.log(`🛑 Assertion Failed: ${actual} !==  ${expected} `);
-      }
-}
 const middle = function(actual) {
     if(actual.length < 3 ){
         return []
@@ -51,18 +24,8 @@ const middle = function(actual) {
 
     }
 }
-console.log(middle([1])) // => []
-console.log(middle([1, 2]))
-console.log(middle([1, 2, 3, 4])) // => [2, 3])
-console.log(middle([1, 2, 3, 4, 5, 6]) )// => [3, 4]
-console.log(middle([1, 2, 3])) // => [2]
-console.log(middle([1, 2, 3, 4, 5])) // => [3]
 
-console.log(assertArraysEqual([ ], [ ])); // => should PASS)
-console.log(assertArraysEqual(middle([ 1,2]), [ ])); // => should PASS)
-console.log(assertArraysEqual(middle([ 1,2,3]), [2 ])); // => should PASS)
-console.log(assertArraysEqual(middle([ 1,2,3,4]), [2 ,3])); // => should PASS)
-console.log(assertArraysEqual(middle([ 1,2,3,4,5]), [3])); // => should PASS)
-console.log(assertArraysEqual(middle([ 1]), [])); // => should PASS)
+module.exports = middle;
+
 
 
