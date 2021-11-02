@@ -56,3 +56,5 @@ const data5 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 
 assertArraysEqual( takeUntil(data3, x =>x % 2 ===0), [21,3,5,9,11,13])
 assertArraysEqual( takeUntil(data4, x =>x.length>8), ["hi", "szrgzsgz"])
+
+module.exports = takeUntil;
