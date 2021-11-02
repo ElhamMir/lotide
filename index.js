@@ -10,15 +10,15 @@ const map = require('./map');
 const letterPositions = require('./letterPositions');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  without: without,
-  takeUntil: takeUntil,
-  swapper: swapper,
-  min: min,
-  map: map,
-  letterPositions: letterPositions
+ head,
+  tail,
+  middle,
+  without,
+  takeUntil,
+  swapper,
+  min,
+  map,
+  letterPositions
 
 
 };
